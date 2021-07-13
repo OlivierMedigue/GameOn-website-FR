@@ -56,31 +56,26 @@
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
-            <form id="my-form" name="reserve">
+            <form id="my-form" name="reserve" method="POST">
               <div class="formData">
                 <label for="first">Prénom</label><br>
                 <input class="text-control" type="text" id="first" name="first"/><br>
-                <span id="first-Error"></span>
               </div>
               <div class="formData">
                 <label for="last">Nom</label><br>
                 <input class="text-control" type="text" id="last" name="last"/><br>
-                <span id="last-Error"></span>
               </div>
               <div class="formData">
                 <label for="email">E-mail</label><br>
                 <input class="text-control" type="email" id="email" name="email"/><br>
-                <span id="email-Error"></span>
               </div>
               <div class="formData">
                 <label for="birthdate">Date de naissance</label><br>
                 <input class="text-control" type="date" id="birthdate" name="birthdate"/><br>
-                <span class="birthdate-Error"></span>
               </div>
               <div class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity">
-                <span id ="quantity-Error"></span>
               </div>
               <p class="text-label">Quelles villes ?</p>
               <div class="formData">
@@ -108,7 +103,6 @@
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label>
-                <span id="radio-Error"></span>
               </div>
               <div class="formData">
                 <input for="checkbox1" class="checkbox-input" type="checkbox" id="checkbox1" required/>
@@ -122,17 +116,20 @@
                   <span class="checkbox-icon"></span>
                   Je souhaite être prévenu des prochains évènements.
                 </label>
-                <br>
-                <span id="conditionError"></span>               
+                <br>           
               </div>
-              <input
-                class="btn-submit"
-                type="submit"
-                class="button"
-                value="C'est parti"
-              />
+              <input id="submit-button" class="btn-submit button" type="submit" value="C'est parti"/>
             </form>
           </div>
+        </div>
+      </div>
+      <div class="modal-valid">
+        <div class="content">
+          <div class="modal-body"></div>
+            <span class="close"></span>
+            <span class="txt-validation">Thank you for submitting your registration details</span>
+            <input id="submit-button" type="submit" class="btn-submit-valid button-close" value="Close"/>
+            
         </div>
       </div>
     </main>
