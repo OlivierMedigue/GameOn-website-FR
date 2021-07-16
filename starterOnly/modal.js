@@ -175,8 +175,6 @@ function checkValidedBox(){
     isValidatedBoxCorrect = false 
   }
 }
-
-
 function checkForm(){
   checkFirstName()
   checkLastName ()
