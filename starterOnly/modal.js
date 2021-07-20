@@ -17,7 +17,8 @@ const closeBtn = document.querySelector(".modal-valid .btn-submit-valid");
 const closeCross = document.querySelector(".modal-valid .close");
 
 let errorMessages = {
-  firstLastName: "Veuillez entrer 2 caractères ou plus",
+  firstName: "Veuillez entrer 2 caractères ou plus pour le prénom",
+  lastName: "Veuillez entrer 2 caractères ou plus pour le nom",
   email: "Veuillez entrer une adresse mail valide",
   birthdate: "Veuillez indiquer une date de naissance",
   quantity: "Veuillez indiquer un nombre entre 0 et 99",
@@ -25,7 +26,6 @@ let errorMessages = {
   condition: "Veuillez accepter les termes et conditions.",
 }
   
-
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -52,7 +52,7 @@ function checkFirstName(){
     isFirstNameCorrect = true
   } else {
     //console.log('le prenom est incorrect');
-    firstName.parentNode.setAttribute("data-error", errorMessages.firstLastName)
+    firstName.parentNode.setAttribute("data-error", errorMessages.firstName)
     firstName.parentNode.setAttribute("data-error-visible", "true")
     isFirstNameCorrect = false
   }
@@ -70,7 +70,7 @@ function checkLastName(){
     lastName.parentNode.removeAttribute("data-error-visible")
   } else {
     // console.log('le nom est incorrect');
-    lastName.parentNode.setAttribute("data-error", errorMessages.firstLastName)
+    lastName.parentNode.setAttribute("data-error", errorMessages.lastName)
     lastName.parentNode.setAttribute("data-error-visible", "true")
     isLastNameCorrect = false   
   }
@@ -136,7 +136,7 @@ function checkQuantity(){
 
 //-----location------
 
-let isLocationCorrect = false;
+let isLocationCorrect = false
 let locations = document.querySelectorAll("input[name=location]")
 for(var i = 0; i < locations.length; i++){
  locations[i].addEventListener("click", checkLocations)    
@@ -157,8 +157,8 @@ function checkLocations(){
   }
 }
 
-
 //-----Checkbox------
+
 let validatedBox = document.getElementById("checkbox1")
 let isValidatedBoxCorrect = false
 validatedBox.addEventListener("click", checkValidedBox)
